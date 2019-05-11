@@ -1,5 +1,5 @@
 import tensorflow as tf
-
+import cv2
 def one_hot(labels, C):
     """
     makes one hot from labels
