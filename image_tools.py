@@ -55,4 +55,15 @@ def split(X_tr, Y_tr):
     return X_train, y_train, X_test, y_test
 
 
+def load_test_jpgs():
+    """
+    loads test files
+    """
+    X_te = []
+    for i in os.listdir(test_fold):
+        X_te.append(cv2.imread(test_fold + i))
 
+    X_te = np.asarray(X_te)
+    X_te = X_te.astype('float32')
+    X_te = /= 255
+    return X_te
